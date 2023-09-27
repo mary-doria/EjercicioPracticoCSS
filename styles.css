@@ -61,13 +61,13 @@ h1 {
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    bottom: 0; /* Fija el footer en la parte inferior */
-
-    
+    background-color: black;
+    padding: 20px;
+    color: white;
+    text-align: center; 
+    position: fixed;
+    bottom: 0; 
+    width: 100%; 
 }
 
 
