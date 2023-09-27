@@ -3,23 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Web</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Asegúrate de tener un archivo CSS para los estilos -->
+    <title>Pagina One Piece</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .image-section {
+        display: flex;
+        grid-template-columns: repeat(3, 1fr);
+        grid-row-gap: 20px;
+        }
+
+        .image-section > .row:nth-child(2) {
+        grid-template-columns: repeat(3, 1fr);
+        }
+
+        .image-section > .row:nth-child(3) {
+        grid-template-columns: repeat(2, 1fr);
+        }
+
+        .image-item img {
+        max-width: 100%;
+        height: auto;
+        }
+
+        .nav-section {
+        background-color: gray;
+        padding: 20px;
+        color: white;
+        width: 200px;
+        }
+
+        .main-section {
+        display: flex;
+        flex-direction: row;
+        }
+
+        .image-section {
+        flex: 2;
+        padding: 20px;
+        }
+
+        .image-item img {
+        max-width: 100%;
+        height: auto;
+        }
+
+
+      
+
+
+    </style>
 </head>
 <body>
     <header>
-        <h1>Encabezado de Mi Página</h1>
+        <h1>One Piece</h1>
     </header>
 
     <section class="main-section">
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="onepiece.html">Galería One Piece</a></li>
-                <li><a href="jujutsukaisen.html">Galería Jujutsu Kaisen</a></li>
-                <li><a href="hellparadise.html">Galería Hell Paradise</a></li>
-            </ul>
-        </nav>
+        <section class="nav-section">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="onepiece.html">Galería One Piece</a></li>
+                    <li><a href="jujutsukaisen.html">Galería Jujutsu Kaisen</a></li>
+                    <li><a href="hellparadise.html">Galería Hell Paradise</a></li>
+                </ul>
+            </nav>
+        </section>
+        
 
         <section class="image-section">
             <div class="row">
@@ -49,10 +99,11 @@
                     <img src="Imagenes\One Piece\onepiece2.png" alt="Imagen 7">
                 </div>
             </div>
+        </section>
     </section>
 
     <footer>
-        <p>Pie de página de Mi Página</p>
+        <p>Realizador por: Mary Andrea Doria Gomez - Derechos reservados &copy; 2023</p>
     </footer>
 </body>
 </html>

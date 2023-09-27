@@ -109,3 +109,66 @@ footer {
     transition: filter 0.3s;
 }
 
+
+Para organizar las imágenes en filas de 2, 3 y 2 como lo deseas, puedes utilizar CSS para controlar el diseño. Puedes hacerlo usando Flexbox o CSS Grid. Aquí tienes un ejemplo de cómo hacerlo utilizando CSS Grid:
+
+HTML:
+
+html
+Copy code
+<section class="image-section">
+    <div class="row">
+        <div class="image-item">
+            <img src="Imagenes\One Piece\onepiece1.png" alt="Imagen 1">
+        </div>
+        <div class="image-item">
+            <img src="Imagenes\One Piece\onepiece7.png" alt="Imagen 2">
+        </div>
+    </div>
+    <div class="row">
+        <div class="image-item">
+            <img src="Imagenes\One Piece\onepiece8.png" alt="Imagen 3">
+        </div>
+        <div class="image-item">
+            <img src="Imagenes\One Piece\onepiece4.png" alt="Imagen 4">
+        </div>
+        <div class="image-item">
+            <img src="Imagenes\One Piece\onepiece5.png" alt="Imagen 5">
+        </div>
+    </div>
+    <div class="row">
+        <div class="image-item">
+            <img src="Imagenes\One Piece\onepiece6.png" alt="Imagen 6">
+        </div>
+        <div class="image-item">
+            <img src="Imagenes\One Piece\onepiece2.png" alt="Imagen 7">
+        </div>
+    </div>
+</section>
+CSS:
+
+css
+Copy code
+/* Estilo para la sección de imágenes */
+.image-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas en la primera fila */
+  grid-row-gap: 20px; /* Espacio vertical entre las filas */
+}
+
+/* Estilo para la segunda fila */
+.image-section > .row:nth-child(2) {
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas en la segunda fila */
+}
+
+/* Estilo para la tercera fila */
+.image-section > .row:nth-child(3) {
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas en la tercera fila */
+}
+
+/* Estilo para los elementos de imagen */
+.image-item img {
+  max-width: 100%;
+  height: auto;
+}
+
