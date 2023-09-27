@@ -3,59 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina One Piece</title>
+    <title>Pagina Hell Paradise</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        .image-section {
-        display: flex;
-        grid-template-columns: repeat(3, 1fr);
-        grid-row-gap: 20px;
+       .image-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-row-gap: 20px;
         }
 
         .image-section > .row:nth-child(2) {
-        grid-template-columns: repeat(3, 1fr);
+            max-width: 70%;
+        }
+        .image-section > .row:nth-child(1) {
+            max-width: 90%;
         }
 
         .image-section > .row:nth-child(3) {
-        grid-template-columns: repeat(2, 1fr);
+            max-width: 90%;
+            justify-content: flex-start; /* Alinea los elementos hacia la izquierda */
+            transform: translateX(-30px); /* Desplaza hacia la izquierda en 30px */
         }
-
         .image-item img {
         max-width: 100%;
         height: auto;
+        transition: transform 0.3s; /* Agrega una transición suave de 0.3 segundos */
         }
 
+        /* Estilo para los elementos de imagen al pasar el cursor por encima */
+        .image-item img:hover {
+        transform: scale(1.5); /* Amplía la imagen al 120% del tamaño original */
+        }
+
+   
+
+
+
         .nav-section {
-        background-color: gray;
-        padding: 20px;
-        color: white;
-        width: 200px;
+            background-color: gray;
+            padding: 20px;
+            color: white;
+            width: 200px;
+        }
+
+        .nav-section nav ul li {
+            margin-bottom: 20px;
+        }
+
+        .nav-section nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .nav-section nav ul li a:hover {
+            text-decoration: underline;
         }
 
         .main-section {
-        display: flex;
-        flex-direction: row;
+            display: flex;
+            flex-direction: row;
         }
 
         .image-section {
-        flex: 2;
-        padding: 20px;
+            flex: 2;
+            padding: 20px;
         }
 
         .image-item img {
-        max-width: 100%;
-        height: auto;
+            max-width: 100%;
+            height: auto;
         }
-
-
-      
-
-
     </style>
 </head>
 <body>
     <header>
-        <h1>One Piece</h1>
+        <h1>Hell Paradise</h1>
     </header>
 
     <section class="main-section">
@@ -74,29 +97,29 @@
         <section class="image-section">
             <div class="row">
                 <div class="image-item">
-                    <img src="Imagenes\One Piece\onepiece1.png" alt="Imagen 1">
+                    <img src="Imagenes\Hell Paradise\hellpara1.png" alt="Imagen 1">
                 </div>
                 <div class="image-item">
-                    <img src="Imagenes\One Piece\onepiece7.png" alt="Imagen 2">
-                </div>
-            </div>
-            <div class="row">
-                <div class="image-item">
-                    <img src="Imagenes\One Piece\onepiece8.png" alt="Imagen 3">
-                </div>
-                <div class="image-item">
-                    <img src="Imagenes\One Piece\onepiece4.png" alt="Imagen 4">
-                </div>
-                <div class="image-item">
-                    <img src="Imagenes\One Piece\onepiece5.png" alt="Imagen 5">
+                    <img src="Imagenes\Hell Paradise\hellpara2.png" alt="Imagen 2">
                 </div>
             </div>
             <div class="row">
                 <div class="image-item">
-                    <img src="Imagenes\One Piece\onepiece6.png" alt="Imagen 6">
+                    <img src="Imagenes\Hell Paradise\hellpara3.png" alt="Imagen 3">
                 </div>
                 <div class="image-item">
-                    <img src="Imagenes\One Piece\onepiece2.png" alt="Imagen 7">
+                    <img src="Imagenes\Hell Paradise\hellpara4.png" alt="Imagen 4">
+                </div>
+                <div class="image-item">
+                    <img src="Imagenes\Hell Paradise\hellpara5.png" alt="Imagen 5">
+                </div>
+            </div>
+            <div class="row">
+                <div class="image-item">
+                    <img src="Imagenes\Hell Paradise\hellpara2.png" alt="Imagen 6">
+                </div>
+                <div class="image-item">
+                    <img src="Imagenes\Hell Paradise\hellpara7.png" alt="Imagen 7">
                 </div>
             </div>
         </section>

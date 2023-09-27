@@ -3,56 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Web</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Asegúrate de tener un archivo CSS para los estilos -->
+    <title>Pagina Jujutsu Kaisen</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+       .image-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-row-gap: 20px;
+        }
+
+        .image-section > .row:nth-child(2) {
+            max-width: 70%;
+        }
+        .image-section > .row:nth-child(1) {
+            max-width: 90%;
+        }
+
+        .image-section > .row:nth-child(3) {
+            max-width: 90%;
+        }
+
+       .image-section > .row:nth-child(3) {
+
+        justify-content: flex-start; /* Alinea los elementos hacia la izquierda */
+        transform: translateX(-30px); /* Desplaza hacia la izquierda en 30px */
+       }   
+       .image-item img {
+        max-width: 100%;
+        height: auto;
+        transition: transform 0.3s; /* Agrega una transición suave de 0.3 segundos */
+        }
+
+        /* Estilo para los elementos de imagen al pasar el cursor por encima */
+        .image-item img:hover {
+        transform: scale(1.5); /* Amplía la imagen al 120% del tamaño original */
+        }
+   
+       
+
+
+        .nav-section {
+            background-color: gray;
+            padding: 20px;
+            color: white;
+            width: 200px;
+        }
+
+        .nav-section nav ul li {
+            margin-bottom: 20px;
+        }
+
+        .nav-section nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .nav-section nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .main-section {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .image-section {
+            flex: 2;
+            padding: 20px;
+        }
+
+        .image-item img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Encabezado de Mi Página</h1>
+        <h1> Jujutsu Kaisen</h1>
     </header>
 
     <section class="main-section">
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="onepiece.html">Galería One Piece</a></li>
-                <li><a href="jujutsukaisen.html">Galería Jujutsu Kaisen</a></li>
-                <li><a href="hellparadise.html">Galería Hell Paradise</a></li>
-            </ul>
-        </nav>
+        <section class="nav-section">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="onepiece.html">Galería One Piece</a></li>
+                    <li><a href="jujutsukaisen.html">Galería Jujutsu Kaisen</a></li>
+                    <li><a href="hellparadise.html">Galería Hell Paradise</a></li>
+                </ul>
+            </nav>
+        </section>
+        
 
         <section class="image-section">
             <div class="row">
                 <div class="image-item">
-                    <img src="Imagenes\One Piece\onepiece1.png" alt="Imagen 1">
+                    <img src="Imagenes\Jujutsu Kaisen\jujutsu1.png" alt="Imagen 1">
                 </div>
                 <div class="image-item">
-                    <img src="Imagenes\One Piece\onepiece7.png" alt="Imagen 2">
+                    <img src="Imagenes\Jujutsu Kaisen\jujutsu3.png" alt="Imagen 2">
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="image-item">
+                    <img src="Imagenes\Jujutsu Kaisen\jujutsu2.png" alt="Imagen 3">
+                </div>
+                <div class="image-item">
+                    <img src="Imagenes\Jujutsu Kaisen\jujutsu4.png" alt="Imagen 4">
+                </div>
+                <div class="image-item">
+                    <img src="Imagenes\Jujutsu Kaisen\jujutsu5.png" alt="Imagen 5">
                 </div>
             </div>
             <div class="row">
                 <div class="image-item">
-                    <img src="Imagenes\One Piece\onepiece8.png" alt="Imagen 3">
+                    <img src="Imagenes\Jujutsu Kaisen\jujutsu6.png" alt="Imagen 6">
                 </div>
                 <div class="image-item">
-                    <img src="Imagenes\One Piece\onepiece4.png" alt="Imagen 4">
-                </div>
-                <div class="image-item">
-                    <img src="Imagenes\One Piece\onepiece5.png" alt="Imagen 5">
+                    <img src="Imagenes\Jujutsu Kaisen\jujutsu7.png" alt="Imagen 7">
                 </div>
             </div>
-            <div class="row">
-                <div class="image-item">
-                    <img src="Imagenes\One Piece\onepiece6.png" alt="Imagen 6">
-                </div>
-                <div class="image-item">
-                    <img src="Imagenes\One Piece\onepiece2.png" alt="Imagen 7">
-                </div>
-            </div>
+        </section>
     </section>
 
     <footer>
-        <p>Pie de página de Mi Página</p>
+        <p>Realizador por: Mary Andrea Doria Gomez - Derechos reservados &copy; 2023</p>
     </footer>
 </body>
 </html>
